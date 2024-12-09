@@ -176,3 +176,33 @@ function invert(array) {
 console.log(invert([1, 2, 3, 4, 5]));
 console.log(invert([1, -2, 3, -4, 5]));
 console.log(invert([]));
+
+function getAverage(marks) {
+  let res = marks.reduce((acc, el) => {
+    return acc + el;
+  });
+  return Math.ceil(res / marks.length);
+}
+
+console.log(getAverage([2, 2, 2, 2]));
+
+function monkeyCount(n) {
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+console.log(monkeyCount(5));
+
+function adjacentElementsProduct(array) {
+  let arr = [];
+  for (let i = 0; i < array.length - 1; i++) {
+    arr.push(array[i] * array[i + 1]);
+  }
+  return Math.max(...arr);
+}
+
+console.log(adjacentElementsProduct([5, 8]));
+console.log(adjacentElementsProduct([4, 12, 3, 1, 5]));
